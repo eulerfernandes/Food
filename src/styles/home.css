@@ -46,6 +46,10 @@
     border-radius: 12px;
 }
 
+#phone_button button {
+    box-shadow: none;
+}
+
 
 #banner {
     display: flex;
@@ -61,13 +65,37 @@
 }
 
 .shape {
-    background-color: #e5b64a;
+    background-color: #ffe8b4;
     width: 50%;
     height: 100%;
     position: absolute;
-    position: relative;
     border-radius: 40% 30% 0% 20%;
     top: 0;
     right: 0;
     z-index: 1;
+}
+
+@media screen and (max-width: 1170px) {
+    #home {
+        min-height: 100%;
+        padding-top: 0px;
+    }
+
+    #banner,
+    #banner img,
+    #home .shape {
+        display: none;
+    }
+
+    #cta {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #phone_button button {
+        display: none;
+    }
 }
